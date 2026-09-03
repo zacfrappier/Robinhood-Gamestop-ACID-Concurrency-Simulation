@@ -29,7 +29,6 @@ from typing import Dict, List, Optional
 
 #--------------      Dataclasses Represent ERD Entities    ----------------------------------------------
 # Entities: User, BrokerageAccount, Security, Order, Position, CashLedgerEntry, ClearingObligation, TradingRestriction
-# BrokerageStore = in memory data base
 
 @dataclass
 class User:
@@ -101,9 +100,42 @@ class TradingRestriction:
     restriction_type: str
     active: bool
 
+# ----------------------  BrokerageStore = in memory data base ------------------------------------------------------
+
+@dataclass
+class BrokerageStore:
+    users: Dict[str, User] = field(default_factory=dict)
+    accounts: Dict[str, BrokerageAccount] = field(default_factory=dict)
+    securities: Dict[str, Security] = field(default_factory=dict)
+    orders: Dict[str, Order] = field(default_factory=dict)
+    positions: Dict[str, Position] = field(default_factory=dict)
+    cash_ledger: List[CashLedgerEntry] = field(default_factory=list)
+    clearing_obligations: List[ClearingObligation] = field(default_factory=list)
+    restrictions: List[TradingRestriction] = field(default_factory=list)
+    clearing_capacity_remaining: float = 0.0
+    lock: threading.Lock = field(default_factory=threading.Lock)
 
 #----------------    Initial Data Setup -----------------------------------------------------------------
 # create starting states for user, brokerage account, GME security, GME position, limited amount of cash, and capacity
+
+#new_id create unique id for every order
+
+#b_i_s creates starting in memory data-base
+
+#b_g_t simulates buy order, checks cash, checks clearing capacity, waits, creates order, ledger entry, position update, and clearing obligation
+#t_block nested function so it can run with or without lock
+
+#finish ends transaction, records its time and reports
+
+#c_i_v checks final state of simulated database for errors, negative cash, capacity, ledger total, excessive orders
+
+#run_trial runs simulation for thread count and isolation settings
+#worker nested in run trail and is ran per thread
+
+#print_tables prints results from simulation 
+
+#write_csv saves results to view
+
 
 
 #------------------------ Trnasaction function ----------------------------------------------------------
