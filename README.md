@@ -34,15 +34,15 @@ This simulation is modeled from three sources:
 The simulation uses in-memory Python classes that correspond to the ERD entities used in the paper:
 
 | ERD Entity | Purpose in Simulation |
-|---|---|
-| `User` | Represents a verified retail trader. |
-| `BrokerageAccount` | Holds account status, margin status, and available cash. |
-| `Security` | Represents GameStop stock using ticker symbol `GME`. |
-| `Order` | Represents a buy order submitted by the brokerage account. |
-| `Position` | Tracks the account's number of GME shares. |
-| `CashLedgerEntry` | Records cash holds/debits caused by accepted orders. |
-| `ClearingObligation` | Represents downstream clearing/collateral obligations created by executed orders. |
-| `TradingRestriction` | Represents possible restrictions such as buy limits or trading halts. |
+|---                    | ---|
+| `User`                | Represents a verified retail trader. |
+| `BrokerageAccount`    | Holds account status, margin status, and available cash. |
+| `Security`            | Represents GameStop stock using ticker symbol `GME`. |
+| `Order`               | Represents a buy order submitted by the brokerage account. |
+| `Position`            | Tracks the account's number of GME shares. |
+| `CashLedgerEntry`     | Records cash holds/debits caused by accepted orders. |
+| `ClearingObligation`  | Represents downstream clearing/collateral obligations  created by executed orders. |
+| `TradingRestriction`  | Represents possible restrictions such as buy limits or trading halts. |
 
 ## Simulated Transaction
 

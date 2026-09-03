@@ -1,0 +1,7 @@
+threads,phase,accepted_orders,rejected_orders,final_cash,final_gme_shares,clearing_capacity_remaining,integrity_violations,throughput_tx_per_sec,avg_latency_ms,max_latency_ms,elapsed_seconds
+10,no_isolation,10,0,7500.0,10,3750.0,0,830.97,10.35,10.66,0.012
+10,strict_isolation,10,0,7500.0,10,3750.0,0,95.54,56.57,102.8,0.1047
+100,no_isolation,100,0,-15000.0,100,-7500.0,5,4187.74,10.41,11.81,0.0239
+100,strict_isolation,40,60,0.0,40,0.0,0,96.04,330.14,410.67,0.4165
+1000,no_isolation,137,863,-24250.0,137,-12125.0,5,1187.9,1.43,10.79,0.1153
+1000,strict_isolation,40,960,0.0,40,0.0,0,90.17,362.71,408.15,0.4436
