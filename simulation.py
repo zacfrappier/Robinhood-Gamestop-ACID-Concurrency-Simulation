@@ -14,6 +14,27 @@ a small experiment that demonstrates the ACID trade-off discussed in Jim Gray's
 entity integrity, while high contention can reduce throughput and increase
 latency.
 """
+#---------------------------- Imports ------------------------------------------------------------------
 
-#section for entities --------------------
+
+#--------------      Dataclasses Represent ERD Entities    ----------------------------------------------
+# Entities: User, BrokerageAccount, Security, Order, Position, CashLedgerEntry, ClearingObligation, TradingRestriction
+# BrokerageStore = in memory data base
+
+
+#----------------    Initial Data Setup -----------------------------------------------------------------
+# create starting states for user, brokerage account, GME security, GME position, limited amount of cash, and capacity
+
+
+#------------------------ Trnasaction function ----------------------------------------------------------
+
+
+#------------------------------ No isolation vs. Strict Isolation --------------------------------------------
+
+#----------------------------------------------- Integrity Checks ----------------------------------------------
+
+#------------------------------------------------- Running a Trial ------------------------------------------------
+
+#---------------------------------------------- Printing and Saving Results ----------------------------------
+
 
